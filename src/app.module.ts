@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { MoviesController } from './movies/movies.controller';
+import { MoviesModule } from './movies/movies.module';
+import { AppController } from './app.controller';
 
 @Module({
-  imports: [],
-  controllers: [MoviesController],
+  imports: [MoviesModule], //모듈들을 import하는 공간
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule {}
